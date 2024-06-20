@@ -1,8 +1,9 @@
 #!/usr/bin/node
-// prints the arg passed first to it here
+const args = process.argv.slice(1); // Extract arguments (skip script name)
 
-if (process.argv[2] === undefined) {
-  console.log('No argument');
+if (args.length === 0) {
+  console.log("No argument");
 } else {
-  console.log(process.argv[2]);
+  console.log(args[0]); // Print the first argument
 }
+
